@@ -7,20 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A78E96C50E87A909B2FF946 /* Pods_Hackthon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A5D07B7BBC44E0433453AB /* Pods_Hackthon.framework */; };
+		ED41036127B85EE200F165CC /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41036027B85EE200F165CC /* TabController.swift */; };
+		ED41036327B85FA200F165CC /* RecycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41036227B85FA200F165CC /* RecycleViewController.swift */; };
+		ED41036527B86D7600F165CC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41036427B86D7600F165CC /* CustomButton.swift */; };
+		ED41036727B86DC200F165CC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41036627B86DC200F165CC /* Extension.swift */; };
+		ED41036927B873D800F165CC /* SpinneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41036827B873D800F165CC /* SpinneViewController.swift */; };
+		ED41036B27B8749A00F165CC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41036A27B8749A00F165CC /* NetworkManager.swift */; };
 		EDA0494327B4BA7A0060E4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0494227B4BA7A0060E4CE /* AppDelegate.swift */; };
 		EDA0494527B4BA7A0060E4CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0494427B4BA7A0060E4CE /* SceneDelegate.swift */; };
-		EDA0494727B4BA7A0060E4CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0494627B4BA7A0060E4CE /* ViewController.swift */; };
-		EDA0494A27B4BA7A0060E4CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA0494827B4BA7A0060E4CE /* Main.storyboard */; };
+		EDA0494727B4BA7A0060E4CE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0494627B4BA7A0060E4CE /* HomeViewController.swift */; };
 		EDA0494C27B4BA7C0060E4CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA0494B27B4BA7C0060E4CE /* Assets.xcassets */; };
 		EDA0494F27B4BA7C0060E4CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA0494D27B4BA7C0060E4CE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27A5D07B7BBC44E0433453AB /* Pods_Hackthon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackthon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BCB685F3811460AF9B5BD0F /* Pods-Hackthon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackthon.release.xcconfig"; path = "Target Support Files/Pods-Hackthon/Pods-Hackthon.release.xcconfig"; sourceTree = "<group>"; };
+		C4EB56BF8F31093454963568 /* Pods-Hackthon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackthon.debug.xcconfig"; path = "Target Support Files/Pods-Hackthon/Pods-Hackthon.debug.xcconfig"; sourceTree = "<group>"; };
+		ED41036027B85EE200F165CC /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
+		ED41036227B85FA200F165CC /* RecycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleViewController.swift; sourceTree = "<group>"; };
+		ED41036427B86D7600F165CC /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		ED41036627B86DC200F165CC /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		ED41036827B873D800F165CC /* SpinneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinneViewController.swift; sourceTree = "<group>"; };
+		ED41036A27B8749A00F165CC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EDA0493F27B4BA7A0060E4CE /* Hackthon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackthon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA0494227B4BA7A0060E4CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDA0494427B4BA7A0060E4CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EDA0494627B4BA7A0060E4CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EDA0494927B4BA7A0060E4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EDA0494627B4BA7A0060E4CE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EDA0494B27B4BA7C0060E4CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDA0494E27B4BA7C0060E4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDA0495027B4BA7C0060E4CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,17 +45,65 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A78E96C50E87A909B2FF946 /* Pods_Hackthon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59D85F4C679242BB442D668F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C4EB56BF8F31093454963568 /* Pods-Hackthon.debug.xcconfig */,
+				5BCB685F3811460AF9B5BD0F /* Pods-Hackthon.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B4A6875F17EE0DC02A1F44A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27A5D07B7BBC44E0433453AB /* Pods_Hackthon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED8E09EA27B8AA1300B1022B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED8E09EB27B8AA2A00B1022B /* CustomView */,
+				ED41036027B85EE200F165CC /* TabController.swift */,
+				EDA0494627B4BA7A0060E4CE /* HomeViewController.swift */,
+				ED41036827B873D800F165CC /* SpinneViewController.swift */,
+				ED41036227B85FA200F165CC /* RecycleViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		ED8E09EB27B8AA2A00B1022B /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				ED41036427B86D7600F165CC /* CustomButton.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		ED8E09EC27B8AA3F00B1022B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED41036A27B8749A00F165CC /* NetworkManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EDA0493627B4BA7A0060E4CE = {
 			isa = PBXGroup;
 			children = (
 				EDA0494127B4BA7A0060E4CE /* Hackthon */,
 				EDA0494027B4BA7A0060E4CE /* Products */,
+				59D85F4C679242BB442D668F /* Pods */,
+				B4A6875F17EE0DC02A1F44A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +120,9 @@
 			children = (
 				EDA0494227B4BA7A0060E4CE /* AppDelegate.swift */,
 				EDA0494427B4BA7A0060E4CE /* SceneDelegate.swift */,
-				EDA0494627B4BA7A0060E4CE /* ViewController.swift */,
-				EDA0494827B4BA7A0060E4CE /* Main.storyboard */,
+				ED8E09EC27B8AA3F00B1022B /* Model */,
+				ED8E09EA27B8AA1300B1022B /* ViewController */,
+				ED41036627B86DC200F165CC /* Extension.swift */,
 				EDA0494B27B4BA7C0060E4CE /* Assets.xcassets */,
 				EDA0494D27B4BA7C0060E4CE /* LaunchScreen.storyboard */,
 				EDA0495027B4BA7C0060E4CE /* Info.plist */,
@@ -74,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDA0495327B4BA7C0060E4CE /* Build configuration list for PBXNativeTarget "Hackthon" */;
 			buildPhases = (
+				6E0D9627AB357859F9071154 /* [CP] Check Pods Manifest.lock */,
 				EDA0493B27B4BA7A0060E4CE /* Sources */,
 				EDA0493C27B4BA7A0060E4CE /* Frameworks */,
 				EDA0493D27B4BA7A0060E4CE /* Resources */,
+				2468647AE1504AE5334650AF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,18 +192,65 @@
 			files = (
 				EDA0494F27B4BA7C0060E4CE /* LaunchScreen.storyboard in Resources */,
 				EDA0494C27B4BA7C0060E4CE /* Assets.xcassets in Resources */,
-				EDA0494A27B4BA7A0060E4CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2468647AE1504AE5334650AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hackthon/Pods-Hackthon-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hackthon/Pods-Hackthon-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hackthon/Pods-Hackthon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E0D9627AB357859F9071154 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hackthon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EDA0493B27B4BA7A0060E4CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDA0494727B4BA7A0060E4CE /* ViewController.swift in Sources */,
+				ED41036B27B8749A00F165CC /* NetworkManager.swift in Sources */,
+				EDA0494727B4BA7A0060E4CE /* HomeViewController.swift in Sources */,
+				ED41036927B873D800F165CC /* SpinneViewController.swift in Sources */,
+				ED41036127B85EE200F165CC /* TabController.swift in Sources */,
+				ED41036727B86DC200F165CC /* Extension.swift in Sources */,
+				ED41036527B86D7600F165CC /* CustomButton.swift in Sources */,
+				ED41036327B85FA200F165CC /* RecycleViewController.swift in Sources */,
 				EDA0494327B4BA7A0060E4CE /* AppDelegate.swift in Sources */,
 				EDA0494527B4BA7A0060E4CE /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +259,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EDA0494827B4BA7A0060E4CE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EDA0494927B4BA7A0060E4CE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EDA0494D27B4BA7C0060E4CE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,17 +388,20 @@
 		};
 		EDA0495427B4BA7C0060E4CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4EB56BF8F31093454963568 /* Pods-Hackthon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D2VZ8N8LJC;
+				DEVELOPMENT_TEAM = W8LPVXL2B2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hackthon/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "NEED TO USE location";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "use app";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = location;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -302,27 +409,30 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dsn.Hackthon;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.seneca.Hackthon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		EDA0495527B4BA7C0060E4CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BCB685F3811460AF9B5BD0F /* Pods-Hackthon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D2VZ8N8LJC;
+				DEVELOPMENT_TEAM = W8LPVXL2B2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hackthon/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "NEED TO USE location";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "use app";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = location;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,11 +440,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dsn.Hackthon;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.seneca.Hackthon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
