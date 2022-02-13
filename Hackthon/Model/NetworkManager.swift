@@ -6,81 +6,95 @@
 //
 
 import Foundation
+import UIKit
+
+struct Media {
+    let key: String
+    let filename: String
+    let data: Data
+    let mimeType: String
+    init?(withImage image: UIImage, forKey key: String) {
+        self.key = key
+        self.mimeType = "image/jpeg"
+        self.filename = "imagefile.jpg"
+        guard let data = image.jpegData(compressionQuality: 0.7) else { return nil }
+        self.data = data
+    }
+}
 
 class NetworkManager {
     
     static let shared = NetworkManager()
     
-    func uploadImage(_ data: Data, longtitude: Double, latitude: Double, completion: @escaping ([String: Any]) -> Void) {
-        print("uploading")
-        print(data.description)
-        
-        
-        let encodedImageData = data.base64EncodedString()
-        
-        let url = URL(string:"https://sustainability-2022-hacks.herokuapp.com/predict/")
-
-        var request = URLRequest(url: url!)
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        let body = ["file" : encodedImageData,
-                      "long": longtitude,
-                      "lat" : latitude] as [String : Any]
-        
-        let bodyData = try? JSONSerialization.data(withJSONObject: body, options: [])
-        
-        request.httpMethod = "POST"
-        request.httpBody = bodyData
-
-        
-        let session = URLSession.shared
-        
-        _ = session.dataTask(with: request) { data, res, error in
-            guard error == nil else {
-                print("error " + error!.localizedDescription)
-                completion(["": ""])
-                return
-            }
-            
-            guard let data = data else {
-                print("no data found")
-                completion(["": ""])
-                return
-            }
-            let datastr = String(data: data, encoding: .utf8)
-            
-            print("got response and data is .... \(data.description) \(datastr)")
-            
-            
-            do {
-                guard let jsonObject = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {
-                    print("Error: Cannot convert data to JSON object")
-                    completion(["": ""])
-                    return
-                }
-                
-                guard let prediction = jsonObject["prediction"] as? [String : Any], let category = jsonObject["category"] as? [String: Any] else {
-                    print("error parsing data")
-                    completion(["": ""])
-                    return
-                }
-                
-                print("\(prediction["label"]) + \(prediction["prob"])")
-   
-            } catch {
-                print("Error: Trying to convert JSON data to string")
-                completion(["": ""])
-                return
-            }
-            
-            completion(["": ""])
- 
-        }.resume()
-
-        
+    func generateBoundary() -> String {
+       return "Boundary-\(NSUUID().uuidString)"
     }
     
+    func createDataBody(withParameters params: [String : Any]?, media: [Media]?, boundary: String) -> Data {
+       let lineBreak = "\r\n"
+       var body = Data()
+       if let parameters = params {
+          for (key, value) in parameters {
+             body.append("--\(boundary + lineBreak)")
+             body.append("Content-Disposition: form-data; name=\"\(key)\"\(lineBreak + lineBreak)")
+             body.append("\(value as! String + lineBreak)")
+          }
+       }
+       if let media = media {
+          for photo in media {
+             body.append("--\(boundary + lineBreak)")
+             body.append("Content-Disposition: form-data; name=\"\(photo.key)\"; filename=\"\(photo.filename)\"\(lineBreak)")
+             body.append("Content-Type: \(photo.mimeType + lineBreak + lineBreak)")
+             body.append(photo.data)
+             body.append(lineBreak)
+          }
+       }
+       body.append("--\(boundary)--\(lineBreak)")
+       return body
+    }
     
-
+    func uploadImageToServer(_ image :UIImage, lat: String, long: String, callback: @escaping () -> Void) {
+        let parameters = ["lat": lat,
+                          "long": long]
+        guard let mediaImage = Media(withImage: image, forKey: "file") else { return }
+        guard let url = URL(string:"https://sustainability-2022-hacks.herokuapp.com/predict/")else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        //create boundary
+        let boundary = generateBoundary()
+        //set content type
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        //call createDataBody method
+        let dataBody = createDataBody(withParameters: parameters, media: [mediaImage], boundary: boundary)
+        request.httpBody = dataBody
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            
+            callback()
+            if let response = response {
+                print(response)
+            }
+            if let data = data {
+                do {
+                    guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any] else{
+                        return
+                    }
+                    
+                    guard let prediction = json["prediction"] as? [String : Any], let category = json["category"] as? [String: Any] else {
+                        print("error parsing data")
+                        
+                        return
+                    }
+                    
+                    print("\(prediction["label"]) + \(prediction["prob"])")
+                    
+                    
+//                    print(json)
+                } catch {
+                    print(error)
+                }
+            }
+        }.resume()
+    }
     
 }

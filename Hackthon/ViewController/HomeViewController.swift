@@ -186,18 +186,12 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
         
         if let data = image?.jpeg(.medium) {
             
-            let fileName = "ref_\(String.randomString(length: 5))"
-            //            let fileName = "name"
-            
             let child = SpinnerViewController()
-            
-            
             
             picker.addChild(child)
             child.view.frame = picker.view.frame
             picker.view.addSubview(child.view)
             child.didMove(toParent: picker)
-            
             
             
             func removeSpinner() {
@@ -208,27 +202,18 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
             }
             
             
-            
-            
-            NetworkManager.shared.uploadImage(data, longtitude: self.longitude, latitude: self.latitude) { response in
-                print("callback")
+            NetworkManager.shared.uploadImageToServer(image!, lat: "\(self.latitude)", long: "\(self.longitude)") {
                 DispatchQueue.main.async {
                     removeSpinner()
                     self.pickerController.dismiss(animated: true, completion: nil)
                 }
-
-                
             }
-            
-            
             
         } else {
             
             pickerController.dismiss(animated: true, completion: nil)
             
         }
-        
-        
         
     }
     
